@@ -1,0 +1,159 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    background-color: white;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search-bar {
+    width: 30%;
+    border: .1rem solid black;
+    border-radius: .8rem;
+    height: 2rem;
+    margin-top: 2rem;
+    text-indent: 1rem;
+}
+
+.search-bar::placeholder {
+    font-family: 'Orelega One', cursive;
+    font-weight: 900;
+     font-size: large;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-width: 80vw;
+    height: 80vh;
+    margin-top: 2rem;
+    overflow-y: scroll;
+
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 30% 10%;
+    background-color: rgb(245, 245, 245);
+    width: 20rem;
+    height: 20rem;
+    margin: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    border: 1px solid #0984e3;
+    
+}
+.card:hover{
+    /* animation: tilt .5s infinite; */
+    transform: scale(1.05);
+    
+}
+
+.card__heading {
+    font-family: "Roboto", medium 500;
+    font-weight: 500;
+    font-size: 2rem;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: fit-content;
+    color: #575859;
+}
+
+.card__paragraph {
+    font-family: 'Roboto', thin 100;
+    display: -webkit-box;
+    padding: .5rem;
+    font-size: 1.5rem;
+    width: 90%;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    height: 6rem;
+    margin: 0 auto;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    color: rgb(56, 54, 54);
+}
+
+.card__button {
+    background-color: #0984e3;
+    color: white;
+    border-radius: 0 0 1rem 1rem;
+    grid-row-end: 6;
+    border: none;
+}
+
+/* details page */
+
+.details-container {
+    width: 90vw;
+    height: 90vh;
+    margin: 1rem auto;
+    flex-direction: column;
+    display: none;
+}
+
+.heading {
+    font-family: "Roboto";
+    font-size: 3rem;
+    align-self: center;
+
+}
+
+.description {
+    font-family: "Roboto";
+    align-self: center;
+    font-size: 1rem;
+}
+
+.sub-heading {
+    font-family: "Roboto";
+    align-self: flex-start;
+    font-size: 2rem;
+}
+
+.para {
+    font-family: "Roboto";
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.reference {
+    font-family: "Roboto";
+    font-size: 2rem;
+    padding-bottom: 3rem;
+}
+
+.loading {
+    display: inline;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+}
+
+@keyframes tilt{
+    0%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+
+    
+}
